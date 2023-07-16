@@ -3,7 +3,7 @@ package com.bridgelabz.SpringEmployeePayrollApp.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "Employee_Data")
+@Table(name = "Employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,5 +40,8 @@ public class Employee {
 
     public void setSalary(int salary) {
         this.salary = salary;
+    }
+
+    public Employee() {
     }
 }
