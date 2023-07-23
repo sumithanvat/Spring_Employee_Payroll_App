@@ -9,7 +9,9 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.util.List;
+
 @Data
+@NoArgsConstructor
 @Entity
 @Table(name = "Employee_Table")
 public class Employee {
@@ -19,7 +21,7 @@ public class Employee {
     private String fName;
     private String lName;
     private String email;
-    private int phone;
+    private String phone;
     private String address;
     private double salary;
     private String gender;
@@ -28,18 +30,17 @@ public class Employee {
     private List<String> department;
     private String note;
 
-    public Employee(int id , EmployeeDTO employeeDTO) {
-        this.id = id;
-        this.fName = fName;
-        this.lName = lName;
-        this.email = email;
-        this.phone = phone;
-        this.address = address;
-        this.salary = salary;
-        this.gender = gender;
-        this.profilePic = profilePic;
-        this.startDate = startDate;
-        this.department = department;
-        this.note = note;
+    public Employee(EmployeeDTO employeeDTO) {
+        this.fName = employeeDTO.getFName();
+        this.lName = employeeDTO.getLName();
+        this.email = employeeDTO.getEmail();
+        this.phone = employeeDTO.getPhone();
+        this.address = employeeDTO.getAddress();
+        this.salary = employeeDTO.getSalary();
+        this.gender = employeeDTO.getGender();
+        this.profilePic = employeeDTO.getProfilePic();
+        this.startDate = employeeDTO.getStartDate();
+        this.department = employeeDTO.getDepartment();
+        this.note = employeeDTO.getNote();
     }
 }
