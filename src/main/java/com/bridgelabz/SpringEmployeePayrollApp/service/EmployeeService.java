@@ -45,9 +45,9 @@ public class EmployeeService {
         // Check if Employee iss present
         if (employeeRepo.existsById(id)) {
             employeeRepo.deleteById(id);
-            return true; // Deletion successful
+            return true;
         }
-        return false; // Employee not found
+        return false;
     }
 
 }
