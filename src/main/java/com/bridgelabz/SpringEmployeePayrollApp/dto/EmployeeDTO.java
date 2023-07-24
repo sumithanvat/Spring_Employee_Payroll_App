@@ -1,6 +1,10 @@
 package com.bridgelabz.SpringEmployeePayrollApp.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.CollectionTable;
+import jakarta.persistence.Column;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.JoinColumn;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -30,6 +34,7 @@ public class EmployeeDTO {
     public String profilePic;
 //    @JsonFormat(pattern = "dd/mm/yyyy")
     public LocalDate startDate;
+
     public List<String> department;
     @NotBlank
     public String note;
