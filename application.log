@@ -1468,3 +1468,13 @@ java.sql.SQLSyntaxErrorException: Unknown column 'd.employee_id' in 'on clause'
 2023-07-27T05:35:55.557+05:30  WARN 6444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
 2023-07-27T05:35:55.712+05:30  INFO 6444 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Started SpringEmployeePayrollAppApplication in 18.321 seconds (process running for 19.72)
 2023-07-27T05:36:27.912+05:30 ERROR 6444 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table if exists employee_table
+2023-07-27T05:36:32.366+05:30  INFO 13260 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Starting SpringEmployeePayrollAppApplication using Java 19.0.2 with PID 13260 (F:\Spring_Employee_Payroll_App-UC4_APIs\target\classes started by root in F:\Spring_Employee_Payroll_App-UC4_APIs)
+2023-07-27T05:36:32.369+05:30 DEBUG 13260 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-27T05:36:32.371+05:30  INFO 13260 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-27T05:36:43.417+05:30  WARN 13260 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-27T05:36:44.515+05:30  WARN 13260 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-07-27T05:36:44.631+05:30  INFO 13260 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Started SpringEmployeePayrollAppApplication in 13.516 seconds (process running for 14.827)
+2023-07-27T05:36:55.969+05:30  INFO 13260 --- [http-nio-8087-exec-1] c.b.S.controller.EmployeeController      : Data added Successfully
+2023-07-27T05:37:04.135+05:30  INFO 13260 --- [http-nio-8087-exec-3] c.b.S.controller.EmployeeController      : Data added Successfully
+2023-07-27T05:37:09.520+05:30  INFO 13260 --- [http-nio-8087-exec-4] c.b.S.controller.EmployeeController      : Data added Successfully
+2023-07-27T05:37:19.357+05:30  INFO 13260 --- [http-nio-8087-exec-5] c.b.S.controller.EmployeeController      : Data added Successfully
