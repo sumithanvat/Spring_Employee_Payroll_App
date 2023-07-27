@@ -32,7 +32,7 @@ public class EmployeeDTO {
     public String gender;
     @NotBlank
     public String profilePic;
-//    @JsonFormat(pattern = "dd/mm/yyyy")
+    @JsonFormat(pattern = "dd MMM yyyy")
     public LocalDate startDate;
 
     public List<String> department;
