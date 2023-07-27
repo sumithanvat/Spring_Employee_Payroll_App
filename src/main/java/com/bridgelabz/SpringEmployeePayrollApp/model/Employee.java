@@ -32,8 +32,11 @@ public class Employee {
     @Column(name = "Department")
     private List<String> department;
     private String note;
+    public Employee (EmployeeDTO employeeDTO){
+        this.updateEmployee(employeeDTO);
+    }
 
-    public Employee(EmployeeDTO employeeDTO) {
+    public void updateEmployee(EmployeeDTO employeeDTO) {
         this.fName = employeeDTO.getFName();
         this.lName = employeeDTO.getLName();
         this.email = employeeDTO.getEmail();

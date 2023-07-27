@@ -18,9 +18,25 @@ public class EmployeeService {
     private EmployeeRepo employeeRepo;
 
     public Employee addEmployee(EmployeeDTO employeeDTO) {
+        // Check if the email already exists in the database
+        String email = employeeDTO.getEmail();
+        if (isEmailAlreadyExists(email)) {
+            throw new IllegalArgumentException("Email is already present. Please use a different email address.");
+        }
+
+        // If the email is not present, create a new Employee object and save it in the database
         Employee employeeData = new Employee(employeeDTO);
         return employeeRepo.save(employeeData);
     }
+
+    // Function to check if the email already exists in the database
+    private boolean isEmailAlreadyExists(String email) {
+        // Implement your database query here to check if the email exists
+        // You can use employeeRepo.findByEmail(email) or any appropriate method based on your database setup
+        // Return true if the email exists, false otherwise
+        return employeeRepo.existsByEmail(email);
+    }
+
 
     public Employee getEmployeeById(long id) {
         return employeeRepo.findById(id).orElseThrow(() -> new CostomException("Message With Id:" + id + " Not Present"));
@@ -29,10 +45,8 @@ public class EmployeeService {
     public Employee updateEmployee(long id, EmployeeDTO employeeDTO) {
         Employee employeeData = getEmployeeById(id);
         if (employeeData != null) {
-            Employee saveEmployee =new Employee(employeeDTO);
-            saveEmployee.setId(id);
-            //employeeData.updateEmployee(employeeDTO);
-            return employeeRepo.save(saveEmployee);
+            employeeData.updateEmployee(employeeDTO);
+            return employeeRepo.save(employeeData);
         }
         return null;
     }

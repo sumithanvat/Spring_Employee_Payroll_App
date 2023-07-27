@@ -22,13 +22,25 @@ public class EmployeeController {
 
     @PostMapping("/add")
     public ResponseEntity<ResponseDTO> addEmployee(@Valid @RequestBody EmployeeDTO employeeDTO) {
-        log.info("Data added Successfully");
-        ResponseDTO responseDTO = new ResponseDTO("Data Added Successfully",employeeService.addEmployee(employeeDTO));
-        return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
+        try {
+            Employee addedEmployee = employeeService.addEmployee(employeeDTO);
+            log.info("Data added Successfully");
+            ResponseDTO responseDTO = new ResponseDTO("Data Added Successfully", addedEmployee);
+            return new ResponseEntity<>(responseDTO, HttpStatus.CREATED);
+        } catch (IllegalArgumentException e) {
+            log.error("Email is already present. Please use a different email address.");
+            ResponseDTO responseDTO = new ResponseDTO("Email is already present. Please use a different email address.", null);
+            return new ResponseEntity<>(responseDTO, HttpStatus.CONFLICT);
+        } catch (Exception e) {
+            log.error("An error occurred while processing the request.");
+            ResponseDTO responseDTO = new ResponseDTO("An error occurred while processing the request.", null);
+            return new ResponseEntity<>(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
     }
 
 
-    @GetMapping("/GetAllEmployee")
+
+    @GetMapping("/Getallemployee")
     public ResponseEntity<ResponseDTO> getAllEmployee() {
         log.warn("Retrieving all data");
         ResponseDTO responseDTO = new ResponseDTO(" All Data Retrieve Successfully", employeeService.findAll());

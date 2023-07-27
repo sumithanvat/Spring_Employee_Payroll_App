@@ -9,6 +9,8 @@ import java.util.List;
 
 @Repository
 public interface EmployeeRepo extends JpaRepository<Employee, Long> {
-    @Query(value = "select * from Employee_Table,Department_Table where employee_id=id and department='HR'",nativeQuery = true)
+    @Query(value = "select * from Employee_Table,Department_Table where employee_id=id and department=department",nativeQuery = true)
        List<Employee> findEmployeeByDepartment(String department);
+
+    boolean existsByEmail(String email);
 }
