@@ -22,6 +22,7 @@ public class EmployeeDTO {
     public String fName;
     @Pattern(regexp = "^[A-Z]{1}[a-z]{2,}$",message ="Employee not valid")
     public String lName;
+    @Pattern(regexp = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$",message = "please enter valid email")
     public String email;
     @Pattern(regexp ="^[+]{1}[0-9]{2}[6-9]{1}[0-9]{9}$",message = "invalid mobile number")
     public String phone;

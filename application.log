@@ -1,0 +1,14 @@
+2023-07-28T00:27:25.337+05:30  INFO 10828 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Starting SpringEmployeePayrollAppApplication using Java 19.0.2 with PID 10828 (F:\Spring_Employee_Payroll_App-UC4_APIs\target\classes started by root in F:\Spring_Employee_Payroll_App-UC4_APIs)
+2023-07-28T00:27:25.393+05:30 DEBUG 10828 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-28T00:27:25.395+05:30  INFO 10828 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T00:27:38.254+05:30  WARN 10828 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T00:27:39.296+05:30  INFO 10828 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Started SpringEmployeePayrollAppApplication in 15.302 seconds (process running for 18.286)
+2023-07-28T00:29:22.591+05:30 ERROR 10828 --- [http-nio-8087-exec-1] c.b.S.controller.EmployeeController      : Email is already present. Please use a different email address.
+2023-07-28T00:29:31.677+05:30  INFO 10828 --- [http-nio-8087-exec-5] c.b.S.controller.EmployeeController      : Data added Successfully
+2023-07-28T00:32:56.023+05:30  INFO 10196 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Starting SpringEmployeePayrollAppApplication using Java 19.0.2 with PID 10196 (F:\Spring_Employee_Payroll_App-UC4_APIs\target\classes started by root in F:\Spring_Employee_Payroll_App-UC4_APIs)
+2023-07-28T00:32:56.030+05:30 DEBUG 10196 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Running with Spring Boot v3.1.1, Spring v6.0.10
+2023-07-28T00:32:56.033+05:30  INFO 10196 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : No active profile set, falling back to 1 default profile: "default"
+2023-07-28T00:33:06.995+05:30  WARN 10196 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-07-28T00:33:07.740+05:30  INFO 10196 --- [restartedMain] .b.S.SpringEmployeePayrollAppApplication : Started SpringEmployeePayrollAppApplication in 13.223 seconds (process running for 15.315)
+2023-07-28T00:35:37.931+05:30 ERROR 10196 --- [http-nio-8087-exec-1] c.b.S.controller.EmployeeController      : Email is already present. Please use a different email address.
+2023-07-28T01:14:35.933+05:30  WARN 10196 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m1s845ms439µs500ns).
